@@ -10,7 +10,7 @@ Image upload in Swift using Imgur services.
 ## Workflow
 
 <p align = "center">
-<img src="https://user-images.githubusercontent.com/1303059/151544255-298096f5-aa38-4356-a158-788c97475542.png" width="300" height="750" />
+<img src="https://user-images.githubusercontent.com/1303059/151694694-5fb5a872-0c3b-48fc-af3d-7d77f7e4c5fa.png" width="300" height="750" />
 
 1-Register your application On Imgur.com
 https://api.imgur.com/oauth2/addclient
