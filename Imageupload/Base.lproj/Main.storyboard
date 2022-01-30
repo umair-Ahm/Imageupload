@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Imageupload" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The uploaded image will be downloaded again from the server and displayed here." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5V-xt-QZJ">
+                                <rect key="frame" x="57" y="64" width="300" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="Q2d-9Z-RQU"/>
+                                    <constraint firstAttribute="height" constant="100" id="qLT-bW-GPy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeHolderImg" translatesAutoresizingMaskIntoConstraints="NO" id="irg-6a-wFs">
+                                <rect key="frame" x="107" y="174" width="200" height="200"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="5TZ-1D-eL9"/>
+                                    <constraint firstAttribute="width" constant="200" id="ZOF-Ev-efB"/>
+                                </constraints>
+                            </imageView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="XoS-4r-FxD">
+                                <rect key="frame" x="197" y="264" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="aKn-wy-mOB"/>
+                                    <constraint firstAttribute="height" constant="20" id="il6-8S-QPl"/>
+                                </constraints>
+                            </activityIndicatorView>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DpI-3a-1v3">
+                                <rect key="frame" x="106.5" y="404" width="201" height="31"/>
+                                <color key="backgroundColor" red="0.92156863209999995" green="0.72156864399999998" blue="0.270588249" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="oJS-Cd-Bj0"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Upload image with  Base64"/>
+                                <connections>
+                                    <action selector="UploadImageAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gav-V3-ghA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p5r-eq-2hl">
+                                <rect key="frame" x="99.5" y="460" width="215" height="31"/>
+                                <color key="backgroundColor" red="0.92156863209999995" green="0.72156864399999998" blue="0.270588249" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="WPA-53-0Mq"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Upload image with  ByteArray"/>
+                                <connections>
+                                    <action selector="UploadImageAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LNT-Ju-VQv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9r9-zU-gWh">
+                                <rect key="frame" x="102" y="516" width="210" height="31"/>
+                                <color key="backgroundColor" red="0.92156863209999995" green="0.72156864399999998" blue="0.270588249" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="Zsd-Cz-bul"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Upload image with  MultiPart"/>
+                                <connections>
+                                    <action selector="UploadImageAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S1U-je-BkW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="A5V-xt-QZJ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="0aD-2a-0yy"/>
+                            <constraint firstItem="DpI-3a-1v3" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="139-aa-lUW"/>
+                            <constraint firstItem="p5r-eq-2hl" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="5Bg-vz-jRV"/>
+                            <constraint firstItem="XoS-4r-FxD" firstAttribute="centerY" secondItem="irg-6a-wFs" secondAttribute="centerY" id="Ofx-c1-U65"/>
+                            <constraint firstItem="irg-6a-wFs" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="WtZ-V7-6ZN"/>
+                            <constraint firstItem="DpI-3a-1v3" firstAttribute="top" secondItem="irg-6a-wFs" secondAttribute="bottom" constant="30" id="axo-WU-yr6"/>
+                            <constraint firstItem="p5r-eq-2hl" firstAttribute="top" secondItem="DpI-3a-1v3" secondAttribute="bottom" constant="25" id="bbE-K1-bGx"/>
+                            <constraint firstItem="irg-6a-wFs" firstAttribute="top" secondItem="A5V-xt-QZJ" secondAttribute="bottom" constant="10" id="gHg-YH-ziN"/>
+                            <constraint firstItem="9r9-zU-gWh" firstAttribute="top" secondItem="p5r-eq-2hl" secondAttribute="bottom" constant="25" id="hcV-rd-q0H"/>
+                            <constraint firstItem="XoS-4r-FxD" firstAttribute="centerX" secondItem="irg-6a-wFs" secondAttribute="centerX" id="q97-ZF-IQC"/>
+                            <constraint firstItem="9r9-zU-gWh" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="wF3-VS-FzS"/>
+                            <constraint firstItem="A5V-xt-QZJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="zKh-pr-GVQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="XoS-4r-FxD" id="Wfm-L2-XLY"/>
+                        <outlet property="uploadedImageView" destination="irg-6a-wFs" id="cGt-cM-cBf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="79.710144927536234" y="26.785714285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="placeHolderImg" width="4096" height="4096"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
